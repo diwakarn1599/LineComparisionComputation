@@ -37,8 +37,22 @@ namespace LineComparisionComputation
             lineOneLength = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
             lineTwoLength = Math.Sqrt(Math.Pow(p2 - p1, 2) + Math.Pow(q2 - q1, 2));
             //Checking if line1 equals line 2 by Equals() and ternary operator 
-            String result = lineOneLength.Equals(lineTwoLength) ? "Line one is equal to line Two" : "Line one is not equal to line Two";
-            Console.WriteLine(result);
+            //String result = lineOneLength.Equals(lineTwoLength) ? "Line one is equal to line Two" : "Line one is not equal to line Two";
+            //Console.WriteLine(result);
+            int result = lineOneLength.CompareTo(lineTwoLength);
+            if (result < 0)
+            {
+                Console.WriteLine("Line 1 is less than line 2");
+            }
+            else if(result == 0)
+            {
+                Console.WriteLine("Line 1 is equal to line 2");
+            }
+            else
+            {
+                Console.WriteLine("Line 1 is greater than line 2");
+            }
+
 
 
 
